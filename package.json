@@ -1,0 +1,23 @@
+{
+  "name": "md2ipynb",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require intelli-espower-loader test/"
+  },
+  "author": "Yasuaki Uechi http://randompaper.co",
+  "license": "MIT",
+  "dependencies": {
+    "mdast": "^0.26.2"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.11.0",
+    "intelli-espower-loader": "^0.7.0",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0"
+  },
+  "bin": {
+    "md2ipynb": "bin/md2ipynb"
+  }
+}

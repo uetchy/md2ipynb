@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var fs = require("fs");
+var md2ipynb = require("md2ipynb");
+
+var input = process.argv[2];
+if (input === undefined) {
+  console.log("Usage: md2ipynb <input.md>");
+  process.exit();
+}
+
+var markdown = fs.readFileSync(input, "utf-8");
+var result = md2ipynb(markdown);
+
+console.log(result);
