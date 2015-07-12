@@ -5,7 +5,7 @@ var md2ipynb = require('../lib');
 
 describe('index()', function(){
   beforeEach(function(){
-    this.markdown = "# Heading\n## Heading 2\n### Heading 3\nThis is paragraph.\n[Link](http://example.com) and **Emphasis**.\n\n```\nPlain code block\n```\n - List item\n - Matplotlib\n\n```py\n%matplotlib inline\nimport numpy as np\nimport matplotlib.pyplot as plt\n```\n![sample.png](http://example.com/sample.png)\n\n```math\ndistance = \alpha * speed + \beta\n```\nInline math formula $\alpha$ here."
+    this.markdown = "# Heading\nThis is paragraph.\n[Link](http://example.com) and **Emphasis**.\n\n```\nPlain code block\n```\n - List item\n - Matplotlib\n\n```py\n%matplotlib inline\nimport numpy as np\nimport matplotlib.pyplot as plt\n```\n![sample.png](http://example.com/sample.png)\n\n```math\ndistance = \alpha * speed + \beta\n```\nInline math formula $\alpha$ here.\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
     this.ipynbArray = {
       "cells": [
         {
@@ -13,20 +13,6 @@ describe('index()', function(){
           "metadata": {},
           "source": [
             "# Heading\n"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "## Heading 2\n"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "### Heading 3\n"
           ]
         },
         {
@@ -56,18 +42,15 @@ describe('index()', function(){
         },
         {
           "cell_type": "code",
-          "execution_count": 0,
+          "execution_count": 1,
           "metadata": {
             "collapsed": false
           },
           "outputs": [],
           "source": [
-            "$\n",
-            "%matplotlib inline\n",
             "%matplotlib inline\n",
             "import numpy as np\n",
-            "import matplotlib.pyplot as plt\n",
-            "$"
+            "import matplotlib.pyplot as plt\n"
           ]
         },
         {
@@ -81,7 +64,9 @@ describe('index()', function(){
           "cell_type": "markdown",
           "metadata": {},
           "source": [
-            "distance = alpha * speed + \beta\n"
+            "$\n",
+            "distance = alpha * speed + \beta\n",
+            "$"
           ]
         },
         {
@@ -90,7 +75,19 @@ describe('index()', function(){
           "source": [
             "Inline math formula $alpha$ here.\n"
           ]
-        }
+        },
+        {
+          "cell_type": "code",
+          "execution_count": 2,
+          "metadata": {
+            "collapsed": false
+          },
+          "outputs": [],
+          "source": [
+            "import numpy as np\n",
+            "import matplotlib.pyplot as plt\n"
+          ]
+        },
       ],
       "metadata": {
         "kernelspec": {
@@ -117,6 +114,6 @@ describe('index()', function(){
   });
 
   it('demo', function(){
-    assert( md2ipynb(this.markdown) == JSON.stringify(this.ipynbArray, false, 2) );
+    assert.equal( md2ipynb(this.markdown), JSON.stringify(this.ipynbArray, false, 2) );
   });
 });
