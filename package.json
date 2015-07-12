@@ -1,8 +1,8 @@
 {
   "name": "md2ipynb",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Make your markdown files interactive",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha --require intelli-espower-loader test/"
   },
