@@ -1,7 +1,8 @@
 # ChangeLog
-## [Unreleased]
+## [0.2.0] - 2015-07-14
 ### Added
 - Added new python extensions
+- Support lang format like "python:filename.py"
 
 ## [0.1.1] - 2015-07-12
 ### Fixed

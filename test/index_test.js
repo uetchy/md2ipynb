@@ -5,7 +5,7 @@ var md2ipynb = require('../lib');
 
 describe('index()', function(){
   beforeEach(function(){
-    this.markdown = "# Heading\nThis is paragraph.\n[Link](http://example.com) and **Emphasis**.\n\n```\nPlain code block\n```\n - List item\n - Matplotlib\n\n```py\n%matplotlib inline\nimport numpy as np\nimport matplotlib.pyplot as plt\n```\n![sample.png](http://example.com/sample.png)\n\n```math\ndistance = \alpha * speed + \beta\n```\nInline math formula $\alpha$ here.\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
+    this.markdown = "# Heading\nThis is paragraph.\n[Link](http://example.com) and **Emphasis**.\n\n```\nPlain code block\n```\n - List item\n - Matplotlib\n\n```py:test_01.py\n%matplotlib inline\nimport numpy as np\nimport matplotlib.pyplot as plt\n```\n![sample.png](http://example.com/sample.png)\n\n```math\ndistance = \alpha * speed + \beta\n```\nInline math formula $\alpha$ here.\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
     this.ipynbArray = {
       "cells": [
         {
