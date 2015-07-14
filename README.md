@@ -2,6 +2,14 @@
 
 Make your markdown files interactive.
 
+## Usage
+
+```node
+var md2ipynb = require("md2ipynb");
+var ipynb = md2ipynb(markdownDocument);
+console.log(ipynb);
+```
+
 ## Install
 
 ```
