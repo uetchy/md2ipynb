@@ -3,92 +3,82 @@ var assert = require('power-assert');
 
 var md2ipynb = require('../lib');
 
-describe('index()', function(){
-  beforeEach(function(){
+describe('index()', function() {
+  beforeEach(function() {
     this.markdown = "# Heading\nThis is paragraph.\n[Link](http://example.com) and **Emphasis**.\n\n```\nPlain code block\n```\n - List item\n - Matplotlib\n\n```py:test_01.py\n%matplotlib inline\nimport numpy as np\nimport matplotlib.pyplot as plt\n```\n![sample.png](http://example.com/sample.png)\n\n```math\ndistance = \alpha * speed + \beta\n```\nInline math formula $\alpha$ here.\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
     this.ipynbArray = {
-      "cells": [
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "# Heading\n"
-          ]
+      "cells": [{
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "# Heading\n"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "This is paragraph.\n",
+          "[Link](http://example.com) and **Emphasis**.\n"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "```\n",
+          "Plain code block\n",
+          "```"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "-   List item\n",
+          "-   Matplotlib\n"
+        ]
+      }, {
+        "cell_type": "code",
+        "execution_count": 1,
+        "metadata": {
+          "collapsed": false
         },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "This is paragraph.\n",
-            "[Link](http://example.com) and **Emphasis**.\n"
-          ]
+        "outputs": [],
+        "source": [
+          "%matplotlib inline\n",
+          "import numpy as np\n",
+          "import matplotlib.pyplot as plt\n"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "![sample.png](http://example.com/sample.png)\n"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "$\n",
+          "distance = alpha * speed + \beta\n",
+          "$"
+        ]
+      }, {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+          "Inline math formula $alpha$ here.\n"
+        ]
+      }, {
+        "cell_type": "code",
+        "execution_count": 2,
+        "metadata": {
+          "collapsed": false
         },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "```\n",
-            "Plain code block\n",
-            "```"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "-   List item\n",
-            "-   Matplotlib\n"
-          ]
-        },
-        {
-          "cell_type": "code",
-          "execution_count": 1,
-          "metadata": {
-            "collapsed": false
-          },
-          "outputs": [],
-          "source": [
-            "%matplotlib inline\n",
-            "import numpy as np\n",
-            "import matplotlib.pyplot as plt\n"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "![sample.png](http://example.com/sample.png)\n"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "$\n",
-            "distance = alpha * speed + \beta\n",
-            "$"
-          ]
-        },
-        {
-          "cell_type": "markdown",
-          "metadata": {},
-          "source": [
-            "Inline math formula $alpha$ here.\n"
-          ]
-        },
-        {
-          "cell_type": "code",
-          "execution_count": 2,
-          "metadata": {
-            "collapsed": false
-          },
-          "outputs": [],
-          "source": [
-            "import numpy as np\n",
-            "import matplotlib.pyplot as plt\n"
-          ]
-        },
-      ],
+        "outputs": [],
+        "source": [
+          "import numpy as np\n",
+          "import matplotlib.pyplot as plt\n"
+        ]
+      }, ],
       "metadata": {
         "kernelspec": {
           "display_name": "Python 3",
@@ -113,7 +103,7 @@ describe('index()', function(){
     };
   });
 
-  it('demo', function(){
-    assert.equal( md2ipynb(this.markdown), JSON.stringify(this.ipynbArray, false, 2) );
+  it('demo', function() {
+    assert.equal(md2ipynb(this.markdown), JSON.stringify(this.ipynbArray, false, 2));
   });
 });
