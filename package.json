@@ -1,15 +1,14 @@
 {
   "name": "md2ipynb",
-  "version": "0.2.1",
   "description": "Make your markdown files interactive",
+  "version": "0.2.1",
+  "author": "Yasuaki Uechi https://uechi.io",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --require intelli-espower-loader test/"
   },
-  "author": "Yasuaki Uechi https://randompaper.co",
-  "license": "MIT",
   "dependencies": {
-    "remark": "^9.0.0",
+    "remark": "^10.0.1",
     "remark-yaml-config": "^4.0.1"
   },
   "devDependencies": {
@@ -20,5 +19,10 @@
   },
   "bin": {
     "md2ipynb": "bin/md2ipynb"
-  }
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "license": "MIT"
 }

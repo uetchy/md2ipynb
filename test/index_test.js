@@ -1,16 +1,16 @@
 const mocha = require('mocha')
 const assert = require('power-assert')
 
-const md2ipynb = require('../lib')
+const md2ipynb = require('..')
 const { input, output } = require('./fixture')
 
-describe('index()', function() {
-  beforeEach(function() {
+describe('index()', () => {
+  beforeEach(() => {
     this.markdown = input
     this.ipynbArray = output
   })
 
-  it('demo', function() {
+  it('demo', () => {
     assert.equal(
       md2ipynb(this.markdown),
       JSON.stringify(this.ipynbArray, false, 2)

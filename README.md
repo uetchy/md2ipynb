@@ -4,10 +4,10 @@ Make your markdown files interactive.
 
 ## Usage
 
-```node
-const md2ipynb = require('md2ipynb');
-const ipynb = md2ipynb(markdownDocument);
-console.log(ipynb);
+```js
+const md2ipynb = require('md2ipynb')
+const ipynb = md2ipynb(markdownDocument)
+console.log(ipynb)
 ```
 
 ## Install
