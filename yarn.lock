@@ -758,18 +758,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-js-yaml@3.13.1:
+js-yaml@3.13.1, js-yaml@^3.5.2:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
-js-yaml@^3.5.2:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
-  integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -1220,9 +1212,9 @@ remark-stringify@^6.0.0:
     xtend "^4.0.1"
 
 remark-yaml-config@^4.0.1:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/remark-yaml-config/-/remark-yaml-config-4.0.3.tgz#976487fa797b753d26346a80601968e180066ef8"
-  integrity sha512-OUEDoRWr21hLV0BZVgbEZHX8CsWBeium+71EKQUnoEIkx6x7Vkr9cRAyRjEwTMRNOIQaNVTmBCfPZHvL6Ym8LQ==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/remark-yaml-config/-/remark-yaml-config-4.1.0.tgz#2306a7225c2bd06d642e691d467b570aa23d7739"
+  integrity sha512-FqTDJ2sIl1j0ZpT+wCtFNe0KcZ9GMhfhuOuT9RhPEpK2mehbNm4kTmWlSZm1qvULVt2O01CK9kVkc/dfbRix0w==
   dependencies:
     js-yaml "^3.5.2"
 
